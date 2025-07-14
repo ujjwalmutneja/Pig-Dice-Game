@@ -1,0 +1,40 @@
+{
+  "name": "pig-dice-game",
+  "version": "2.0.0",
+  "description": "Enhanced Pig Dice Game with modern features and accessibility",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "lint": "eslint script.js",
+    "format": "prettier --write *.html *.css *.js",
+    "validate": "html-validate index.html"
+  },
+  "keywords": [
+    "game",
+    "dice",
+    "pig-game",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive",
+    "accessibility"
+  ],
+  "author": "Enhanced by GitHub Copilot",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "html-validate": "^7.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "homepage": "index.html"
+}

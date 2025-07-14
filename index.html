@@ -4,34 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Pig Game - A fun dice rolling game for two players" />
     <link rel="stylesheet" href="style.css" />
-      <title>Pig Game</title>
+    <title>Pig Game - Dice Rolling Fun!</title>
   </head>
   <body>
-    <main>
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">1</p>
+    <header class="game-header">
+      <h1>🐷 Pig Dice Game</h1>
+      <p class="game-rules">First to 50 points wins! Roll 1 = lose turn</p>
+      <div class="keyboard-hints">
+        <span>🎮 Controls: Space/Enter = Roll | H = Hold | N = New Game</span>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="player player--0 player--active" aria-label="Player 1 section">
+        <h2 class="name" id="name--0" title="Click to change name" tabindex="0" role="button">Player 1</h2>
+        <p class="score" id="score--0" aria-label="Player 1 total score">0</p>
         <div class="current">
           <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">0</p>
+          <p class="current-score" id="current--0" aria-label="Player 1 current round score">0</p>
         </div>
       </section>
 
-      <section class="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">1</p>
+      <section class="player player--1" aria-label="Player 2 section">
+        <h2 class="name" id="name--1" title="Click to change name" tabindex="0" role="button">Player 2</h2>
+        <p class="score" id="score--1" aria-label="Player 2 total score">0</p>
         <div class="current">
           <p class="current-label">Current</p>
-          <p class="current-score" id="current--1">0</p>
+          <p class="current-score" id="current--1" aria-label="Player 2 current round score">0</p>
         </div>
       </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
+      <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
+      
+      <div class="game-controls">
+        <button class="btn btn--new" aria-label="Start new game" title="Keyboard: N">
+          🔄 New game
+        </button>
+        <button class="btn btn--roll" aria-label="Roll dice" title="Keyboard: Space or Enter">
+          🎲 Roll dice
+        </button>
+        <button class="btn btn--hold" aria-label="Hold current score" title="Keyboard: H">
+          📥 Hold
+        </button>
+      </div>
     </main>
+
+    <footer class="game-info">
+      <details class="game-history">
+        <summary>Game Rules & Tips</summary>
+        <ul>
+          <li>🎯 <strong>Goal:</strong> First player to reach 50 points wins</li>
+          <li>🎲 <strong>Roll:</strong> Add dice value to current score</li>
+          <li>📥 <strong>Hold:</strong> Add current score to total and end turn</li>
+          <li>⚠️ <strong>Warning:</strong> Rolling 1 loses all current points and ends turn</li>
+          <li>💡 <strong>Strategy:</strong> Balance risk vs. reward when deciding to hold</li>
+        </ul>
+      </details>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
